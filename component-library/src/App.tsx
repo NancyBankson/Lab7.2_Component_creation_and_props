@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <AlertBox 
-        type="success"
-        message="You did it!"
+        type="info"
+        message='Qapla!  That is Klingon for "success!"'
         onClose ={() => {
           alert("You just viewed the alert box, bruh")
         }}
@@ -20,3 +20,4 @@ function App() {
 }
 
 export default App
+

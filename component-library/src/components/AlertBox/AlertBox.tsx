@@ -16,8 +16,7 @@ export function AlertBox({ type, message, onClose, children }: AlertBoxProps) {
                     <button
                         onClick={onClose}
                         className="alert-button"
-                    >
-                        ×
+                    >Close
                     </button>
                 )}
             </div>

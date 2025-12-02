@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -17,6 +18,7 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+  */
 
 @keyframes logo-spin {
   from {
@@ -39,4 +41,34 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.success, .error, .warning, .info {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.success {
+  color: rgb(38, 95, 38);
+  border: 5px solid rgb(119, 212, 119);
+}
+
+.error {
+  color: rgb(110, 51, 42);
+  border: 5px solid rgb(212, 131, 119);
+}
+
+.warning {
+  color: rgb(110, 100, 42);
+  border: 5px solid rgb(212, 204, 119);
+}
+
+.info {
+  color: rgb(42, 57, 110);
+  border: 5px solid rgb(119, 128, 212);
+}
+
+.alert-button {
+  padding: 4px 6px;
+  border: 1px solid gray;
 }

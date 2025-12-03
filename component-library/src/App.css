@@ -72,3 +72,6 @@
   padding: 4px 6px;
   border: 1px solid gray;
 }
+.product-image {
+  max-height: 200px;
+}

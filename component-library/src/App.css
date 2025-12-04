@@ -72,6 +72,29 @@
   padding: 4px 6px;
   border: 1px solid gray;
 }
+.product-display {
+  margin: 20px 0px;
+  padding: 40px;
+  border: 10px solid green;
+  border-radius: 20px;
+}
 .product-image {
-  max-height: 200px;
+  max-width: 100px;
+}
+.alert-button {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+#user-box {
+  display: flex;
+}
+.user-display {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.edit-button {
+  background-color: blue;
+  color: white;
+  margin-bottom: 20px;
 }

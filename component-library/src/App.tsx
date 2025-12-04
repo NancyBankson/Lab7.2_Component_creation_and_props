@@ -21,7 +21,7 @@ function App() {
     name: 'John Doe',
     email: 'john.doe@example.com',
     role: 'Software Engineer',
-    avatarUrl: 'https://example.com/avatar.jpg'
+    avatarUrl: './avatar.png'
   };
 
   return (

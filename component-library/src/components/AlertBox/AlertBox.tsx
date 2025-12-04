@@ -1,6 +1,8 @@
 import type { AlertBoxProps } from "../../types";
 
+// Returns jsx for alert box
 export function AlertBox({ type, message, onClose, children }: AlertBoxProps) {
+// alert style indicates the class of the box which is styled in css     
     const alertStyle = {
         success: "success",
         error: "error",

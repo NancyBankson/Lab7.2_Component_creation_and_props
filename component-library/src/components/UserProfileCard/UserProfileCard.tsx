@@ -1,19 +1,19 @@
 import type { UserProfileCardProps } from "../../types/index.ts";
 
-
+// function for user profile card jsx
 export function UserProfileCard({ user, showEmail, showRole, onEdit, children }: UserProfileCardProps) {
 
     return (
         <div className="user-display">
-            <div>
+            <div id="user-box">
                 <img className="avatar" src={user.avatarUrl}></img>
                 <div>
-                    <h5>{user.name}</h5>
+                    <h3>{user.name}</h3>
                     {(showEmail) ? <p>{user.email}</p> : null}
                     {(showRole) ? <p>{user.role}</p> : null}
                 </div>
-                {onEdit && (<button onClick={() => onEdit(user.id)} className="edit-button">Edit Profile</button>)}
             </div>
+            {onEdit && (<button onClick={() => onEdit(user.id)} className="edit-button">Edit Profile</button>)}
             {children}
         </div>
 

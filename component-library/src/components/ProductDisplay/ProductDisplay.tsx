@@ -1,7 +1,7 @@
 import type { ProductDisplayProps } from "../../types/index.ts";
 
 
-
+// Function for product display jsx
 export function ProductDisplay({ product, showDescription, showStockStatus, onAddToCart, children }: ProductDisplayProps) {
 
     return (

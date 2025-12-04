@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# Lab 7.1 Component Creation and Props  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+In this lab we used React to create an app.  The purpose of the lab was to practice passing props to create components and then rendering those components in the app.  The lab simulated product display, user profile, and an alert box.  To access the app, the user needs to use npm run dev to access the app.  The example displays one alert box, a product display card, and a user profile card.  Each has a clickable button that displays an alert.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+Activity Tasks
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Component Implementation:
 
-## Expanding the ESLint configuration
+- Implement each component according to its interface requirements.
+- Use proper TypeScript types and interfaces.
+- Implement prop validation where appropriate.
+- Handle optional props and children correctly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Component Testing:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Test different prop combinations.
+- Verify that components render correctly with various props.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Component Composition:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Create example usage of components working together.
+- Demonstrate prop passing between components.
+- Show how to handle component nesting.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Documentation:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Add comments to describe component props.
+- Create example usage documentation.
+- Document any special prop handling or requirements.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tools
+
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- React
+
+## Reflection Questions
+
+1. How did you handle optional props in your components?
+
+For the optional children, I added a p element to the alert box component.  For the product display I used to optional booleans to display the p elements only if the boolean was true.  I also chose to use the optional button to post an alert when clicked.  For the user profile, I used the optional booleans to display the role and email when true.  I also chose to display the optional image element.
+
+2. What considerations did you make when designing the component interfaces?
+
+I considered how to code the elements for the optional props.  I was able to use conditionals that displayed the elements only when the booleans were true.
+
+3. How did you ensure type safety across your components?
+
+I ensured type safety by declaring the types when declaring variables.  This ensured errors were caught at compile time rather than run time.
+
+4. What challenges did you face when implementing component composition?
+
+I found it difficult to deal with the components that were based on two interfaces.  Thankfully, Amanada helped me to understand that I could use dot notation to create the component for the product and user portion of those props and pass the interface type as a prop.  I also experienced some errors because I wasn't passing the argument for the functions in the component.  I was able to clear those up in office hours.
